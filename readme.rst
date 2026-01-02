@@ -1,71 +1,72 @@
-###################
-What is CodeIgniter
-###################
+#######################################################
+Cleanliness & Fuel Management System (CFMS) Dashboard
+#######################################################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+CFMS is a web application designed to streamline the management of cleanliness schedules and monitor fuel consumption. Built with **CodeIgniter 3**, this system provides an integrated platform for operational tracking and reporting.
 
 *******************
-Release Information
+Key Features
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+- **Fuel Monitoring:** Track fuel usage logs, refueling history, and efficiency metrics.
+- **Cleanliness Management:** Schedule and monitor cleaning tasks with a checklist-based system.
+- **Interactive Dashboard:** Real-time data visualization for quick operational insights.
+- **Role-Based Access:** Management of users with different levels of access (Admin, Supervisor, etc.).
 
 **************************
-Changelog and New Features
+Technical Specifications
 **************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+- **Framework:** CodeIgniter 3.1.x
+- **Language:** PHP 8.x (Compatible with PHP 5.6+)
+- **Database:** MySQL / MariaDB
+- **Frontend:** Bootstrap 4
 
 *******************
-Server Requirements
+Installation Guide
 *******************
 
-PHP version 5.6 or newer is recommended.
+1. **Clone the Project**
+   .. code-block:: bash
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+      git clone https://github.com/afafirmansyah/web-application-CodeIgniter3.git
 
-************
-Installation
-************
+2. **Database Setup**
+   - Create a new database named ``db_cleanliness_fuel`` (or your preferred name).
+   - Import the ``database.sql`` file provided in the root directory into your MySQL server.
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+3. **Configure Database Connection**
+   - Open ``application/config/database.php``.
+   - Update your database credentials:
+     
+     .. code-block:: php
+
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'your_database_name',
+
+4. **Set Base URL**
+   - Open ``application/config/config.php``.
+   - Set your local URL:
+     
+     .. code-block:: php
+
+        $config['base_url'] = 'http://localhost/web-application-CodeIgniter3/';
+
+5. **Launch**
+   - Access the application in your browser via your local server (XAMPP/WAMP).
 
 *******
 License
 *******
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+This project is licensed under the MIT License - see the `license.txt` file for details.
 
 *********
-Resources
+Contact
 *********
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+**Ahmad Fauzi Firmansyah**
+- **GitHub:** `afafirmansyah <https://github.com/afafirmansyah>`_
+- **LinkedIn:** `ahmad-fauzi-firmansyah <https://linkedin.com/in/ahmad-fauzi-firmansyah/>`_
